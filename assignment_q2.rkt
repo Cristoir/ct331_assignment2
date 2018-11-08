@@ -20,3 +20,12 @@
   (cond [(null? list) 0]
   [else (+ 1 (cout_top_level (cdr list)))])
 )
+
+;part d
+(provide count_instances)
+
+(define (count_instances ato list)
+ (cond ((null? list)0)
+ ((= ato (car list))(+ 1(count_instances ato (cdr list))))
+ ((count_instances ato (cdr list)))
+ )
